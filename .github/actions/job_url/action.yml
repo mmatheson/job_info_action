@@ -2,8 +2,10 @@ name: Job URL Printer
 author: mmatheson
 description: Prints the URL to the current job
 
-permissions:
-      actions: read
+inputs:
+  gh-token:
+    description: 'GitHub Token with the "actions:read" permission specified'
+    required: true
 
 runs:
   using: composite
