@@ -28,6 +28,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Print Job
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: ./.github/actions/job_url
-        with:
-          gh-token: ${{ secrets.GITHUB_TOKEN }}
