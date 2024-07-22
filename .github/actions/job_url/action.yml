@@ -2,11 +2,6 @@ name: Job URL Printer
 author: mmatheson
 description: Prints the URL to the current job
 
-inputs:
-  gh-token:
-    description: 'GitHub Token with the "actions:read" permission specified'
-    required: true
-
 runs:
   using: composite
   steps:
@@ -17,5 +12,3 @@ runs:
           job_id=$(echo $jobs | jq -r '.jobs[] | .id')
           echo Job URL: $job_url
       shell: bash
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
