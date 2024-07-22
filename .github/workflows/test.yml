@@ -26,3 +26,5 @@ jobs:
 
       - name: Print Job
         uses: ./.github/actions/job_url
+        with:
+          gh-token: ${{ secrets.GITHUB_TOKEN }}
